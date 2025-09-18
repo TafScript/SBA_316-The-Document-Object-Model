@@ -26,3 +26,47 @@ section {
   max-width: 500px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background: #222;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #444;
+}
+
+#response {
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #222;
+  color: #fff;
+}
