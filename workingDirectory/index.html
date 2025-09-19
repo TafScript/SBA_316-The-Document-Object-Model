@@ -1,36 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Form App</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <title>Contact Form</title>
+  <link rel="stylesheet" src="workingDirectory/styles.css">
 </head>
 <body>
-  <header>
-    <h1 id="greeting"></h1>
-    <p id="clock"></p>
-  </header>
+  <h1 id="greeting"></h1>
+  <div id="clock"></div>
 
-  <main>
-    <section>
-      <h2>Contact Me</h2>
-      <form id="contactForm">
-        <input type="text" id="name" placeholder="Your Name" required minlength="2">
-        <input type="email" id="email" placeholder="Your Email" required>
-        <textarea id="message" placeholder="Your Message" required minlength="5"></textarea>
-        <button type="submit">Send</button>
-      </form>
-      <div id="response"></div>
-    </section>
-  </main>
+  <form id="form">
+    <input id="name" placeholder="Name">
+    <input id="email" placeholder="Email">
+    <textarea id="message" placeholder="Message"></textarea>
+    <button>Submit</button>
+  </form>
 
-  <footer>
-    <p>SBA contact form app</p>
-  </footer>
-
-  
+  <script src="index.js"></script>
 </body>
 </html>
 
