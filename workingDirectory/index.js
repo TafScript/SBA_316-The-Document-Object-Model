@@ -10,7 +10,6 @@ const inputName = document.querySelector("#inputName");
 const email = document.querySelector("#email");
 const message = document.querySelector("#message");
 
-
 const formParent = form.parentNode;
 formParent.style.border = "2px solid #ff0000ff"; 
 formParent.style.padding = "10px";
@@ -19,17 +18,13 @@ formParent.style.padding = "10px";
 const firstFormChild = form.firstElementChild; 
 if (firstFormChild) firstFormChild.style.outline = "2px dotted green"; 
 
-
 const nextSibling = inputName.nextElementSibling;
 if (nextSibling) nextSibling.style.border = "2px dashed orange"; 
-
-
 
 const statusMessage = document.createElement("p");
 statusMessage.textContent = "Fill out the form";
 statusMessage.style.color = "blue";
 form.appendChild(statusMessage);
-
 
 const fragment = document.createDocumentFragment();
 const inputs = document.querySelectorAll("input, textarea");
@@ -38,12 +33,10 @@ inputs.forEach(input => {
   fragment.appendChild(clone);
 });
 
-
-
 form.addEventListener("submit", handleSubmit);
 inputName.addEventListener("input", validateName);
 
-
+// input validation handling
 function validateName() {
   if (inputName.value.length < 2) {
     inputName.classList.add("invalid");
@@ -54,11 +47,9 @@ function validateName() {
   }
 }
 
-
+// submission handler/validation
 function handleSubmit(e) {
   e.preventDefault();
-
-
   
   if (!inputName.value || !email.value || !message.value) {
     alert("Enter input.");
